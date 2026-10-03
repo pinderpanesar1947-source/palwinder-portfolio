@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAYFIND — Project</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    .project-header { padding: 150px 4rem 4rem 4rem; }
+    .project-meta-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+      margin-top: 4rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 2rem 0;
+    }
+    .meta-block .micro-text { margin-bottom: 0.5rem; color: var(--text-muted); }
+    .meta-block .body-text { font-size: 0.9rem; font-weight: 500; }
+    .project-body { padding: 4rem; }
+    .project-section-title { font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 2rem; }
+    .full-image { width: 100%; height: auto; border: 1px solid var(--border-color); margin-bottom: 4rem; }
+    .project-nav { display: flex; justify-content: space-between; padding: 4rem; border-top: 1px solid var(--border-color); }
+  </style>
+</head>
+<body class="light-theme">
+  
+  <div class="grain-overlay"></div>
+  <div class="transition-overlay"></div>
+  
+  <div class="cursor">
+    <div class="cursor-text"></div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-logo magnetic" data-magnetic onclick="window.location.href='index.html'">PALWINDER SINGH</div>
+    <div class="nav-links">
+      <a href="index.html" class="magnetic" data-magnetic>Close Project</a>
+    </div>
+  </nav>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+      
+      <div class="editorial-grid-bg">
+        <div class="grid-line v-1"></div>
+        <div class="grid-line v-2"></div>
+        <div class="grid-line v-3"></div>
+      </div>
+
+      <header class="project-header">
+        <h1 class="giant-type gs-reveal">WAYFIND</h1>
+        
+        <div class="project-meta-grid gs-reveal">
+          <div class="meta-block">
+            <p class="micro-text">ROLE</p>
+            <p class="body-text">UI/UX & 3D Prototyper</p>
+          </div>
+          <div class="meta-block">
+            <p class="micro-text">TIMELINE</p>
+            <p class="body-text">4 Months</p>
+          </div>
+          <div class="meta-block">
+            <p class="micro-text">TOOLS</p>
+            <p class="body-text">Figma, Spline, Three.js</p>
+          </div>
+          <div class="meta-block">
+            <p class="micro-text">CATEGORY</p>
+            <p class="body-text">Spatial UX, Navigation</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="project-body">
+        <img src="assets/images/wayfind/project_mindspace.png" alt="Wayfind UI" class="full-image gs-reveal" />
+        
+        <div style="max-width: 800px; margin: 0 auto 6rem auto;" class="gs-reveal">
+          <h2 class="project-section-title">Project Overview</h2>
+          <p class="body-text" style="font-size: 1.1rem; line-height: 1.8;">
+            WAYFIND is an experience-first navigation platform for urban environments. Moving away from top-down 2D maps, it utilizes augmented spatial intelligence to provide users with a cinematic, 3D routing experience, making complex intersections and multi-level city blocks intuitive to navigate.
+          </p>
+        </div>
+
+        <h2 class="project-section-title gs-reveal">Key Screens & Visual Direction</h2>
+        <div style="background: #e8e8e8; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); margin-bottom: 2rem;" class="gs-reveal">
+          <p class="micro-text">/assets/images/wayfind/screen_01.png</p>
+        </div>
+        <div style="background: #e8e8e8; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); margin-bottom: 4rem;" class="gs-reveal">
+          <p class="micro-text">/assets/images/wayfind/screen_02.png</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto 6rem auto;" class="gs-reveal">
+          <h2 class="project-section-title">UX Process & Concept</h2>
+          <p class="body-text" style="font-size: 1.1rem; line-height: 1.8;">
+            The primary challenge was visual overload. Standard navigation apps overlay too much data. By rendering a stylized, low-poly 3D environment, we highlight only what's necessary: landmarks, the route, and real-time contextual information via floating glass UI cards.
+          </p>
+        </div>
+
+        <h2 class="project-section-title gs-reveal">Final Experience</h2>
+        <div style="background: #e8e8e8; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); margin-bottom: 4rem;" class="gs-reveal">
+          <p class="micro-text">/assets/images/wayfind/final_mockup.png</p>
+        </div>
+      </div>
+
+      <div class="project-nav">
+        <a href="sonora.html" class="editorial-btn magnetic" data-magnetic>← PREV PROJECT</a>
+        <a href="index.html" class="editorial-btn magnetic" data-magnetic>BACK TO WORK →</a>
+      </div>
+      
+      <footer class="editorial-footer">
+        <p class="micro-text">© 2026 PALWINDER SINGH.</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    const revealElements = document.querySelectorAll('.gs-reveal');
+    revealElements.forEach((el) => {
+      gsap.to(el, { y: 0, opacity: 1, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+    });
+
+    const transitionOverlay = document.querySelector('.transition-overlay');
+    window.addEventListener('load', () => {
+      if(transitionOverlay) {
+        transitionOverlay.style.transformOrigin = 'top';
+        transitionOverlay.style.scaleY = '1';
+        gsap.to(transitionOverlay, { scaleY: 0, duration: 1, ease: 'power4.inOut' });
+      }
+    });
+
+    document.querySelectorAll('.editorial-btn, .nav-links a').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const href = btn.getAttribute('href');
+        if (!href || href === '#') return;
+        e.preventDefault();
+        gsap.to(transitionOverlay, {
+          scaleY: 1, transformOrigin: 'bottom', duration: 0.8, ease: 'power4.inOut',
+          onComplete: () => { window.location.href = href; }
+        });
+      });
+    });
+
+    document.querySelectorAll('.magnetic').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(el, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
+      });
+      el.addEventListener('mouseleave', () => { gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" }); });
+    });
+  </script>
+</body>
+</html>

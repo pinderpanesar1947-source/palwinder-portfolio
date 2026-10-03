@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palwinder Singh — Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body class="light-theme">
+  
+  <!-- Grain overlay -->
+  <div class="grain-overlay"></div>
+  
+  <!-- Page Transition Overlay -->
+  <div class="transition-overlay"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <div class="cursor-text"></div>
+  </div>
+
+  <!-- WebGL Canvas for 3D elements -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <nav class="nav">
+    <div class="nav-logo magnetic" data-magnetic>PALWINDER SINGH</div>
+    <div class="nav-links">
+      <a href="#work" class="magnetic" data-magnetic>Work</a>
+      <a href="#about" class="magnetic" data-magnetic>About</a>
+      <a href="#contact" class="magnetic" data-magnetic>Contact</a>
+    </div>
+  </nav>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- Ambient Glows -->
+  <div class="ambient-glow glow-hero" id="glow-hero"></div>
+  <div class="ambient-glow glow-sonora" id="glow-sonora"></div>
+  <div class="ambient-glow glow-wayfind" id="glow-wayfind"></div>
+  <div class="ambient-glow glow-about" id="glow-about"></div>
+
+  <!-- EDITORIAL GRID LINES -->
+  <div class="editorial-grid-bg">
+    <div class="grid-line"><div class="grid-cross"></div><div class="grid-circle"></div></div>
+    <div class="grid-line"><div class="grid-cross" style="top: 70%;"></div></div>
+    <div class="grid-line"><div class="grid-cross" style="top: 20%;"></div><div class="grid-cross" style="top: 80%;"></div></div>
+    <div class="grid-line"><div class="grid-circle" style="top: 60%;"></div></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-layout">
+      
+      <!-- Typography that sits BEHIND 3D -->
+      <div class="hero-center-type" style="z-index: 0; opacity: 0.2;">
+        <h1 class="giant-type">PORT<br/>FOLIO</h1>
+      </div>
+      
+      <!-- Typography that sits IN FRONT OF 3D -->
+      <div class="hero-center-type" style="z-index: 10;">
+        <h1 class="giant-type gs-reveal">PORT<br/>FOLIO</h1>
+      </div>
+
+      <div class="hero-info top-left gs-reveal">
+        <p class="micro-text">2026</p>
+      </div>
+      
+      <div class="hero-info top-right gs-reveal">
+        <p class="micro-text">UI/UX DESIGNER<br/>BASED IN INDIA</p>
+      </div>
+
+      <div class="hero-info mid-left gs-reveal">
+        <p class="micro-text">SELECTED WORK</p>
+      </div>
+
+      <div class="hero-info mid-right gs-reveal">
+        <p class="micro-text">AVAILABLE FOR PROJECTS</p>
+      </div>
+
+      <div class="hero-info bottom-left gs-reveal">
+        <p class="micro-text">PALWINDER SINGH</p>
+        <p class="micro-text">DIGITAL EXPERIENCES</p>
+      </div>
+
+      <div class="hero-info bottom-right gs-reveal">
+        <p class="micro-text">SCROLL TO EXPLORE <span class="arrow">↓</span></p>
+      </div>
+
+      <div class="deco-circle-large"></div>
+      <div class="deco-circle-small"></div>
+      <div class="deco-coord" style="position: absolute; bottom: 120px; right: 0; transform: rotate(-90deg); transform-origin: right bottom;">45.002° N / 12.01° E</div>
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <p class="micro-text">01 / SELECTED WORK</p>
+  </div>
+
+  <!-- PROJECT 01: SONORA -->
+  <section class="editorial-project" id="project-sonora">
+    <div class="project-content-left">
+      <div class="project-meta gs-reveal">
+        <span class="project-num">01</span>
+        <h2 class="project-title">SONORA</h2>
+        <p class="project-tags">MUSIC / MOBILE / UI</p>
+      </div>
+      <p class="project-desc gs-reveal">
+        Premium music streaming experience designed around immersive discovery and expressive interaction.
+      </p>
+      <div class="gs-reveal">
+        <a href="sonora.html" class="editorial-btn magnetic" data-magnetic>
+          VIEW PROJECT <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="project-visual-right">
+      <div class="project-visual-tracker" id="tracker-sonora" data-cursor="view"></div>
+      
+      <!-- Floating fragments -->
+      <div class="ui-fragment frag-1 gs-reveal">NOW PLAYING</div>
+      <div class="ui-fragment frag-2 gs-reveal"></div>
+      <div class="ui-fragment frag-3 gs-reveal" style="display: flex; gap: 10px;">
+        <div style="width: 40px; height: 40px; background: rgba(0,0,0,0.1); border-radius: 4px;"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px; justify-content: center;">
+          <div style="width: 60px; height: 4px; background: var(--text-primary);"></div>
+          <div style="width: 40px; height: 4px; background: rgba(0,0,0,0.2);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION DIVIDER -->
+  <div class="section-divider gs-reveal">
+    <div class="divider-line"></div>
+    <p class="micro-text">02 / SPATIAL UX</p>
+  </div>
+
+  <!-- PROJECT 02: WAYFIND -->
+  <section class="editorial-project reverse" id="project-wayfind">
+    <div class="project-visual-left">
+      <div class="project-visual-tracker" id="tracker-wayfind" data-cursor="view"></div>
+      
+      <!-- Floating fragments -->
+      <div class="ui-fragment frag-1 gs-reveal" style="top: 20%; left: 0;">NAVIGATING...</div>
+      <div class="ui-fragment frag-3 gs-reveal" style="bottom: 20%; left: 10%; width: 120px; flex-direction: column; align-items: flex-start; padding: 10px;">
+        <div style="font-weight: 800; font-family: 'Syne'; font-size: 1rem; color: #121212;">2.4 MILES</div>
+        <div style="font-size: 0.55rem;">TO DESTINATION</div>
+      </div>
+    </div>
+    <div class="project-content-right">
+      <div class="project-meta gs-reveal">
+        <span class="project-num">02</span>
+        <h2 class="project-title">WAYFIND</h2>
+        <p class="project-tags">SPATIAL UX / NAVIGATION / MOBILE</p>
+      </div>
+      <p class="project-desc gs-reveal">
+        Experience-first navigation platform redefining digital wayfinding with 3D spatial mapping and context-aware interactions in urban environments.
+      </p>
+      <div class="gs-reveal">
+        <a href="wayfind.html" class="editorial-btn magnetic" data-magnetic>
+          VIEW PROJECT <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+      <!-- FUTURE PROJECTS WILL BE INJECTED HERE -->
+      <div id="additional-projects"></div>
+
+      <script>
+        // PROJECT DATA STRUCTURE
+        // Easily add new projects by adding objects to this array
+        const futureProjects = [
+          /* Example of adding Project 03:
+          {
+            id: 'project-03',
+            number: '03',
+            title: 'NEXUS',
+            tags: ['FINTECH', 'WEB', 'UI'],
+            description: 'A comprehensive financial dashboard designed for institutional investors, focusing on data clarity.',
+            link: 'nexus.html',
+            imagePlaceholder: 'assets/images/decorative/project_nexus.png'
+          }
+          */
+        ];
+
+        const container = document.getElementById('additional-projects');
+        futureProjects.forEach((proj, index) => {
+          const isReverse = index % 2 === 0; // alternate layout
+          const template = `
+            <section class="editorial-project ${isReverse ? 'reverse' : ''}" id="${proj.id}" style="min-height: 70vh;">
+              <div class="project-content-${isReverse ? 'right' : 'left'}">
+                <div class="project-meta gs-reveal">
+                  <span class="project-num">${proj.number}</span>
+                  <h2 class="project-title">${proj.title}</h2>
+                  ${proj.tags.map(tag => `<p class="project-tags">${tag}</p>`).join('')}
+                </div>
+                <p class="project-desc gs-reveal">${proj.description}</p>
+                <a href="${proj.link}" class="editorial-btn magnetic gs-reveal" data-magnetic>
+                  VIEW PROJECT <span class="arrow">→</span>
+                </a>
+              </div>
+              <div class="project-visual-${isReverse ? 'left' : 'right'}" style="display:flex; align-items:center; justify-content:center;">
+                <!-- Standard 2D Fallback for future dynamic projects, can be upgraded to 3D later -->
+                <div style="width: 100%; height: 100%; padding: 2rem;" class="gs-reveal">
+                  <img src="${proj.imagePlaceholder}" alt="${proj.title}" style="width: 100%; height: 100%; object-fit: cover; border: 1px solid var(--border-color); filter: grayscale(100%);" />
+                </div>
+              </div>
+            </section>
+          `;
+          container.insertAdjacentHTML('beforeend', template);
+        });
+      </script>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-editorial" id="about">
+        <div class="about-header">
+          <h2 class="giant-type outline-text gs-reveal">ABOUT</h2>
+          <p class="micro-text gs-reveal">03 / DESIGN PHILOSOPHY</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-wrapper gs-reveal" data-cursor="explore">
+            <div class="about-deco-circle"></div>
+            <img src="assets/images/profile/palwinder_avatar.png" alt="Palwinder Singh" class="about-img" />
+            <div class="about-deco-frame"></div>
+            <div class="deco-cross x-2">+</div>
+            
+            <div class="ui-fragment gs-reveal" style="bottom: -20px; left: -20px; padding: 10px;">
+              PROFILE.DAT / V1.0
+            </div>
+          </div>
+          <div class="about-text-wrapper gs-reveal">
+            <p class="lead-text">
+              I'm Palwinder Singh, a UI/UX designer focused on creating clean, modern and engaging digital experiences.
+            </p>
+            <p class="body-text">
+              My approach blends high-end editorial aesthetics with cutting-edge front-end technologies like Three.js and GSAP to build memorable interactions. The goal is always: Minimal, Artistic, and Intentional.
+            </p>
+            <div class="gs-reveal" style="margin-top: 2rem;">
+              <p class="micro-text">LOCATION: INDIA / WORLDWIDE</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section class="skills-editorial" id="skills">
+        <div class="section-divider">
+          <div class="divider-line"></div>
+          <p class="micro-text">TOOLKIT & CAPABILITIES</p>
+        </div>
+        <div class="skills-wrapper">
+          <div class="skill-word gs-reveal-word">FIGMA</div>
+          <div class="skill-word gs-reveal-word">PHOTOSHOP</div>
+          <div class="skill-word gs-reveal-word">ILLUSTRATOR</div>
+          <div class="skill-word gs-reveal-word">ADOBE XD</div>
+          <div class="skill-word gs-reveal-word">WIRE</div>
+          <div class="skill-word gs-reveal-word">FLOW</div>
+          <div class="skill-word gs-reveal-word">PROTOTYPE</div>
+          <div class="skill-word gs-reveal-word">INTERACTION</div>
+          <div class="skill-word gs-reveal-word">VISUAL DESIGN</div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-editorial" id="contact">
+        <div class="contact-glow"></div>
+        <div class="contact-top gs-reveal" style="position: relative; z-index: 2;">
+          <h2 class="giant-type">LET'S<br/>CREATE<br/>SOMETHING.</h2>
+        </div>
+        <div class="contact-bottom gs-reveal" style="position: relative; z-index: 2;">
+          <div class="contact-col">
+            <p class="micro-text">UI/UX DESIGNER</p>
+            <a href="mailto:palwindersingh1078@gmail.com" class="email-link magnetic" data-magnetic>
+              palwindersingh1078@gmail.com
+            </a>
+          </div>
+          <div class="contact-col right">
+            <a href="#" class="editorial-btn magnetic" data-magnetic>EMAIL ME</a>
+            <a href="#" class="editorial-btn magnetic" data-magnetic>LINKEDIN</a>
+            <a href="#" class="editorial-btn magnetic" data-magnetic>BEHANCE</a>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="editorial-footer">
+        <p class="micro-text">© 2026 PALWINDER SINGH. ALL RIGHTS RESERVED.</p>
+        <p class="micro-text">PORTFOLIO V2</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+// ==========================================
+// 1. SMOOTH SCROLL (LENIS)
+// ==========================================
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+gsap.ticker.lagSmoothing(0);
+
+// ==========================================
+// 2. CUSTOM CURSOR & MAGNETIC EFFECT
+// ==========================================
+const cursor = document.querySelector('.cursor');
+const cursorText = document.querySelector('.cursor-text');
+let mouseX = 0; let mouseY = 0;
+let cursorX = 0; let cursorY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function renderCursor() {
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+  if(cursor) {
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+  }
+  requestAnimationFrame(renderCursor);
+}
+if(window.matchMedia('(pointer: fine)').matches) {
+  renderCursor();
+}
+
+document.querySelectorAll('[data-cursor]').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const type = el.getAttribute('data-cursor');
+    cursor.classList.add(`hover-${type}`);
+    cursorText.innerText = type === 'view' ? 'VIEW PROJECT' : 'EXPLORE';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover-view', 'hover-explore');
+    cursorText.innerText = '';
+  });
+});
+
+document.querySelectorAll('.magnetic').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    gsap.to(el, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
+  });
+  el.addEventListener('mouseleave', () => {
+    gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" });
+  });
+});
+
+// ==========================================
+// 3. GSAP REVEALS & PAGE TRANSITIONS
+// ==========================================
+const revealElements = document.querySelectorAll('.gs-reveal');
+revealElements.forEach((el) => {
+  gsap.to(el, { y: 0, opacity: 1, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+});
+
+const revealWords = document.querySelectorAll('.gs-reveal-word');
+gsap.to(revealWords, { y: 0, opacity: 1, stagger: 0.05, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: '.skills-wrapper', start: "top 80%" } });
+
+document.querySelectorAll('.about-img').forEach((img) => {
+  img.classList.add('gs-reveal-img');
+  ScrollTrigger.create({ trigger: img, start: "top 80%", onEnter: () => img.classList.add('is-revealed') });
+});
+
+// Subtle Glow Parallax
+const glows = document.querySelectorAll('.ambient-glow');
+window.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 60;
+  const y = (e.clientY / window.innerHeight - 0.5) * 60;
+  glows.forEach(glow => {
+    gsap.to(glow, { x: x, y: y, duration: 1.5, ease: "power2.out" });
+  });
+});
+
+// Page Transitions
+const transitionOverlay = document.querySelector('.transition-overlay');
+let isTransitioning = false;
+
+document.querySelectorAll('.editorial-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const href = btn.getAttribute('href');
+    if (!href || href === '#') return;
+    e.preventDefault();
+    if(isTransitioning) return;
+    isTransitioning = true;
+    
+    // Custom transition fading glows and passing elements
+    gsap.to('.ambient-glow', { opacity: 0, duration: 0.5 });
+    
+    gsap.to(transitionOverlay, {
+      scaleY: 1, transformOrigin: 'bottom', duration: 0.8, ease: 'power4.inOut', delay: 0.2,
+      onComplete: () => { window.location.href = href; }
+    });
+  });
+});
+
+// Remove overlay on load
+window.addEventListener('load', () => {
+  if(transitionOverlay) {
+    transitionOverlay.style.transformOrigin = 'top';
+    transitionOverlay.style.scaleY = '1';
+    gsap.to(transitionOverlay, { scaleY: 0, duration: 1, ease: 'power4.inOut' });
+  }
+});
+
+// ==========================================
+// 4. THREE.JS SETUP (LIGHT THEME)
+// ==========================================
+const canvas = document.querySelector('#webgl-canvas');
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "high-performance" });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+// renderer.toneMapping = THREE.ACESFilmicToneMapping;
+// renderer.toneMappingExposure = 1.0;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+camera.position.z = 10;
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+scene.add(ambientLight);
+const dirLight = new THREE.DirectionalLight(0xffffff, 3);
+dirLight.position.set(5, 5, 5);
+scene.add(dirLight);
+const fillLight = new THREE.DirectionalLight(0xddeeff, 2);
+fillLight.position.set(-5, 0, 5);
+scene.add(fillLight);
+
+const mouse3D = new THREE.Vector2();
+window.addEventListener('mousemove', (e) => {
+  mouse3D.x = (e.clientX / window.innerWidth) * 2 - 1;
+  mouse3D.y = -(e.clientY / window.innerHeight) * 2 + 1;
+});
+
+// --- MATERIALS ---
+const glassMat = new THREE.MeshPhysicalMaterial({
+  color: 0xffffff, metalness: 0.1, roughness: 0.05,
+  transmission: 1.0, thickness: 1.5, ior: 1.4, clearcoat: 1
+});
+const chromeMat = new THREE.MeshStandardMaterial({
+  color: 0xffffff, metalness: 1, roughness: 0.1
+});
+const bluePlastic = new THREE.MeshStandardMaterial({
+  color: 0x9fb6cd, metalness: 0.1, roughness: 0.2
+});
+const orangePlastic = new THREE.MeshStandardMaterial({
+  color: 0xd8b6a0, metalness: 0.1, roughness: 0.2
+});
+const wireframeMat = new THREE.MeshBasicMaterial({
+  color: 0x000000, wireframe: true, transparent: true, opacity: 0.15
+});
+
+// --- HERO SCULPTURE ---
+const heroGroup = new THREE.Group();
+scene.add(heroGroup);
+
+// Abstract forms
+const sphereBig = new THREE.Mesh(new THREE.SphereGeometry(1.5, 64, 64), glassMat);
+heroGroup.add(sphereBig);
+
+const ring = new THREE.Mesh(new THREE.TorusGeometry(2, 0.05, 16, 100), chromeMat);
+ring.rotation.x = Math.PI / 3;
+heroGroup.add(ring);
+
+const wireBox = new THREE.Mesh(new THREE.IcosahedronGeometry(1.8, 1), wireframeMat);
+heroGroup.add(wireBox);
+
+const accent1 = new THREE.Mesh(new THREE.CapsuleGeometry(0.3, 1, 16, 32), bluePlastic);
+accent1.position.set(-1.5, 1, 1);
+accent1.rotation.z = Math.PI / 4;
+heroGroup.add(accent1);
+
+const accent2 = new THREE.Mesh(new THREE.TorusGeometry(0.4, 0.15, 32, 64), orangePlastic);
+accent2.position.set(1.5, -1, 1);
+accent2.rotation.x = Math.PI / 2;
+heroGroup.add(accent2);
+
+const smallSpheres = [];
+for(let i=0; i<12; i++) {
+  const isWire = Math.random() > 0.8;
+  const mesh = new THREE.Mesh(
+    isWire ? new THREE.IcosahedronGeometry(0.2, 0) : new THREE.SphereGeometry(0.15, 32, 32), 
+    isWire ? wireframeMat : (Math.random()>0.5 ? chromeMat : glassMat)
+  );
+  mesh.position.set((Math.random()-0.5)*8, (Math.random()-0.5)*8, (Math.random()-0.5)*5);
+  heroGroup.add(mesh);
+  smallSpheres.push({ mesh, speed: Math.random() * 0.02 + 0.01 });
+}
+
+// --- SONORA PHONE ---
+const sonoraGroup = new THREE.Group();
+scene.add(sonoraGroup);
+
+const phoneGeo = new RoundedBoxGeometry(2, 4, 0.15, 12, 0.05);
+const phoneMat = new THREE.MeshStandardMaterial({ color: 0xe0e0e0, metalness: 0.6, roughness: 0.2 });
+const phone = new THREE.Mesh(phoneGeo, phoneMat);
+sonoraGroup.add(phone);
+
+const screenGeo = new THREE.PlaneGeometry(1.9, 3.9);
+// Load actual project screenshot as texture (easy to replace)
+const textureLoader = new THREE.TextureLoader();
+const screenTexture = textureLoader.load('assets/images/sonora/project_bloom.png');
+screenTexture.colorSpace = THREE.SRGBColorSpace;
+
+const screenMat = new THREE.MeshStandardMaterial({ 
+  color: 0xdddddd, 
+  map: screenTexture,
+  roughness: 0.2, 
+  metalness: 0.1,
+  emissive: 0x222222 // Fallback glow in case of CORS error locally
+});
+const screen = new THREE.Mesh(screenGeo, screenMat);
+screen.position.z = 0.076;
+sonoraGroup.add(screen);
+sonoraGroup.position.y = -20;  
+
+// --- WAYFIND MAP ---
+const wayfindGroup = new THREE.Group();
+scene.add(wayfindGroup);
+
+const mapBaseGeo = new RoundedBoxGeometry(4, 0.2, 4, 4, 0.05);
+const mapBaseMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.9 });
+const mapBase = new THREE.Mesh(mapBaseGeo, mapBaseMat);
+wayfindGroup.add(mapBase);
+
+const boxGeo = new THREE.BoxGeometry(0.4, 1, 0.4);
+for(let i=0; i<12; i++) {
+  const b = new THREE.Mesh(boxGeo, Math.random()>0.7 ? glassMat : new THREE.MeshStandardMaterial({color: 0xeeeeee}));
+  b.position.set((Math.random()-0.5)*3.2, 0.5, (Math.random()-0.5)*3.2);
+  b.scale.y = Math.random() * 1.5 + 0.2;
+  b.position.y = b.scale.y / 2 + 0.1;
+  wayfindGroup.add(b);
+}
+
+// Yellow Route Line
+const points = [
+  new THREE.Vector3(-1.5, 0.3, -1.5),
+  new THREE.Vector3(-0.5, 0.3, -1.0),
+  new THREE.Vector3(0.5, 0.3, 0.0),
+  new THREE.Vector3(1.5, 0.3, 1.5)
+];
+const routeGeo = new THREE.BufferGeometry().setFromPoints(points);
+const routeMat = new THREE.LineBasicMaterial({ color: 0xffb703, linewidth: 3 });
+const routeLine = new THREE.Line(routeGeo, routeMat);
+wayfindGroup.add(routeLine);
+
+// Location Pin
+const pinGeo = new THREE.ConeGeometry(0.1, 0.3, 16);
+const pinMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+const pin = new THREE.Mesh(pinGeo, pinMat);
+pin.rotation.x = Math.PI;
+pin.position.set(1.5, 0.6, 1.5);
+wayfindGroup.add(pin);
+
+wayfindGroup.rotation.x = Math.PI / 4;
+wayfindGroup.rotation.y = -Math.PI / 4;
+wayfindGroup.position.y = -20;
+
+// --- DECO OBJECTS (Between sections) ---
+const decoGroup = new THREE.Group();
+scene.add(decoGroup);
+const floatRing = new THREE.Mesh(new THREE.TorusGeometry(1, 0.02, 16, 64), chromeMat);
+decoGroup.add(floatRing);
+floatRing.position.set(3, -15, 0);
+
+// ==========================================
+// 5. RESPONSIVE SIZING & DOM TRACKING
+// ==========================================
+function getDOMPosition(elementId) {
+  const el = document.getElementById(elementId);
+  if(!el) return new THREE.Vector3(0, -100, 0); 
+  const rect = el.getBoundingClientRect();
+  const domX = rect.left + rect.width / 2;
+  const domY = rect.top + rect.height / 2;
+  const x = (domX / window.innerWidth) * 2 - 1;
+  const y = -(domY / window.innerHeight) * 2 + 1;
+  
+  const vec = new THREE.Vector3(x, y, 0);
+  vec.unproject(camera);
+  const dir = vec.sub(camera.position).normalize();
+  const distance = -camera.position.z / dir.z;
+  const pos = camera.position.clone().add(dir.multiplyScalar(distance));
+  return pos;
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// Scroll Effects
+gsap.to(heroGroup.position, {
+  y: 8,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '#hero',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true
+  }
+});
+
+// ==========================================
+// 6. RENDER LOOP
+// ==========================================
+const clock = new THREE.Clock();
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animate() {
+  requestAnimationFrame(animate);
+  const time = clock.getElapsedTime();
+
+  if (!prefersReducedMotion) {
+    wireBox.rotation.y = time * 0.1;
+    wireBox.rotation.x = time * 0.05;
+    ring.rotation.y = time * 0.2;
+    ring.rotation.x = Math.PI / 3 + Math.sin(time*0.5)*0.2;
+    
+    accent1.rotation.x = time * 0.5;
+    accent2.rotation.y = time * 0.3;
+
+    smallSpheres.forEach(s => {
+      s.mesh.rotation.x += s.speed;
+      s.mesh.rotation.y += s.speed;
+      s.mesh.position.y += Math.sin(time * s.speed * 50) * 0.01;
+    });
+
+    heroGroup.position.x = THREE.MathUtils.lerp(heroGroup.position.x, mouse3D.x * 0.5, 0.05);
+    heroGroup.position.y = THREE.MathUtils.lerp(heroGroup.position.y, mouse3D.y * 0.5, 0.05);
+    
+    floatRing.rotation.x = time * 0.2;
+    floatRing.rotation.y = time * 0.3;
+  }
+
+  const sonoraPos = getDOMPosition('tracker-sonora');
+  sonoraGroup.position.lerp(sonoraPos, 0.1);
+  
+  const wayfindPos = getDOMPosition('tracker-wayfind');
+  wayfindGroup.position.lerp(wayfindPos, 0.1);
+  
+  // Tie float ring position roughly to scroll depth between sections
+  const scrollY = window.scrollY;
+  floatRing.position.y = 5 - (scrollY * 0.01);
+
+  if (!prefersReducedMotion) {
+    sonoraGroup.rotation.y = THREE.MathUtils.lerp(sonoraGroup.rotation.y, mouse3D.x * 0.3 - 0.2, 0.1);
+    sonoraGroup.rotation.x = THREE.MathUtils.lerp(sonoraGroup.rotation.x, mouse3D.y * 0.3, 0.1);
+    
+    wayfindGroup.rotation.y = time * 0.1 - Math.PI / 4 + (mouse3D.x * 0.1); 
+    pin.position.y = 0.6 + Math.sin(time * 3) * 0.1;
+  }
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+</script>
+</body>
+</html>
+
